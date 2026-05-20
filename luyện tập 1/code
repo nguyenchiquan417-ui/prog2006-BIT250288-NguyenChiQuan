@@ -1,0 +1,106 @@
+ex01
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    cout << "Nhap so: ";
+    cin >> n;
+    if (n % 2 == 0)
+        cout << n << " la so chan" << endl;
+    else
+        cout << n << " la so le" << endl;
+    return 0;
+}
+ex2
+#include <iostream>
+using namespace std;
+int main() {
+    float W, H;
+    cout << "Nhap W: "; cin >> W;
+    cout << "Nhap H: "; cin >> H;
+    cout << "Dien tich = " << W * H << endl;
+    return 0;
+}
+ex3
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    cout << "Nhap n: ";
+    cin >> n;
+    for (int i = n; i >= 1; i--)
+        cout << i << " ";
+    cout << endl;
+    return 0;
+}
+ex4
+#include <iostream>
+using namespace std;
+int main() {
+    float a, b;
+    cout << "Nhap a: "; cin >> a;
+    cout << "Nhap b: "; cin >> b;
+    // ax + b = 0
+    if (a == 0) {
+        if (b == 0)
+            cout << "Phuong trinh vo so nghiem" << endl;
+        else
+            cout << "Phuong trinh vo nghiem" << endl;
+    } else {
+        cout << "x = " << -b / a << endl;
+    }
+    return 0;
+}
+ex5
+#include <iostream>
+using namespace std;
+
+int timMax(int arr[], int n) {
+    int max = arr[0];
+    for (int i = 1; i < n; i++)
+        if (arr[i] > max)
+            max = arr[i];
+    return max;
+}
+
+int main() {
+    int arr[] = {3, 7, 1, 9, 4, 6};
+    int n = 6;
+    cout << "Mang: ";
+    for (int i = 0; i < n; i++)
+        cout << arr[i] << " ";
+    cout << "\nGia tri lon nhat: " << timMax(arr, n) << endl;
+    return 0;
+}
+ex6
+#include <iostream>
+using namespace std;
+int main() {
+    int so;
+    cout << "Nhap so (1-7): ";
+    cin >> so;
+    switch (so) {
+        case 1: cout << "Thu Hai" << endl; break;
+        case 2: cout << "Thu Ba"  << endl; break;
+        case 3: cout << "Thu Tu"  << endl; break;
+        case 4: cout << "Thu Nam" << endl; break;
+        case 5: cout << "Thu Sau" << endl; break;
+        case 6: cout << "Thu Bay" << endl; break;
+        case 7: cout << "Chu Nhat"<< endl; break;
+        default: cout << "So khong hop le!" << endl;
+    }
+    return 0;
+}
+ex7
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    cout << "Nhap n: ";
+    cin >> n;
+    long long S = 0;
+    for (int i = 1; i <= n; i++)
+        S += i;
+    cout << "S = " << S << endl;
+    return 0;
+}
